@@ -1,0 +1,13 @@
+Estatística na Programação
+
+De acordo com os conhecimentos aprendidos nesse módulo sobre recursos do javascript moderno,
+crie quatro funções que aceitem qualquer quantidade de parâmetros e utilizando a sintaxe de arrow functions
+para calcular as seguintes operações:
+
+- Média Aritmética Simples: Soma todos os valores e divide pelo total de valores.
+- Média Aritmética Ponderada: Multiplica cada valor pelo seu peso, soma tudo e divide pela soma dos pesos.
+- Mediana: Encontra o valor central da sequência (ordenada). Se houver dois valores centrais, calcula a média deles.
+- Moda: Encontra o valor que mais se repete.
+
+As funções devem mostrar o resultado em texto. Para testar, chame as funções manualmente no JavaScript
+ou pelo console do navegador.

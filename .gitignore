@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Pastas de build
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependências temporárias
+package-lock.json
+yarn.lock
+
+# OS específicos
+.DS_Store
+Thumbs.db

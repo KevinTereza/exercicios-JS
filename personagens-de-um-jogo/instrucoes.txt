@@ -1,0 +1,20 @@
+Exercício – Personagens de um Jogo
+
+1. Crie a classe Character:
+   - Atributos: name, lifePoints, attackPoints, defensePoints
+   - Método: attack(target) → tira da vida do alvo a diferença entre ataque e defesa
+
+2. Crie a classe Thief (herda de Character):
+   - Sobrescreve attack(target) → dano é 2x a diferença entre ataque e defesa
+
+3. Crie a classe Mage (herda de Character):
+   - Novo atributo: magicPoints
+   - Sobrescreve attack(target) → usa ataque + magia contra defesa
+   - Novo método: heal(target) → cura o alvo em 2x os pontos de magia
+
+4. Crie a classe Warrior (herda de Character):
+   - Novos atributos: shieldPoints e position (attack ou defense)
+   - Sobrescreve attack(target) → só ataca se position = "attack"
+   - Novo método: switchPosition() → alterna entre attack e defense
+       - Se defense: defesa = defesa + escudo
+       - Se attack: defesa volta ao normal

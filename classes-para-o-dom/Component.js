@@ -16,11 +16,11 @@ export class Component {
         return document.body.appendChild(this.#componentReference) // Adiciona o elemento no body da página
     }
 
-    getComponent() { // Poderia ser um getter, mas ainda não estudei isso 
+    get component() { 
         return this.#componentReference // Retorna o atributo privado e pode ter suas propriedades alteradas
     }
 
-    updateComponent(element) { // Poderia ser um setter, mas ainda não estudei isso também
+    set component(element) { 
         return this.#componentReference = element // Atualiza o elemento DOM privado armazenado em #componentReference com o parâmetro passado 
     }
 }

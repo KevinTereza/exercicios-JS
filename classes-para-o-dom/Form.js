@@ -6,8 +6,8 @@ export class Form extends Component {
     }
 
     addChildren(...components) {
-        const componentForm = this.getComponent() // Pega o elemento DOM do form (#componentReference)
-        components.forEach(c => componentForm.appendChild(c.getComponent()))
+        const componentForm = this.component // Pega o elemento DOM do form (#componentReference)
+        components.forEach(c => componentForm.appendChild(c.component))
         // Para cada componente passado adiciona seu elemento DOM como filho do form
     }
 }

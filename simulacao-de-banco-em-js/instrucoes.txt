@@ -1,0 +1,69 @@
+Simulação de Banco em JavaScript  
+
+Você deverá construir uma aplicação em JavaScript que simula o funcionamento básico de um banco, utilizando Programação Orientada a Objetos (POO).  
+Implemente as seguintes classes com os atributos e métodos especificados:  
+
+1. Deposit
+- Atributos:  
+  - `value` → valor do depósito  
+  - `createdAt` → data de criação  
+
+2. Transfer
+- Atributos:  
+  - `fromUser` → usuário que enviou a transferência  
+  - `toUser` → usuário que recebeu a transferência  
+  - `value` → valor da transferência  
+  - `createdAt` → data de criação  
+
+3. Loan
+- Atributos:  
+  - **estático privado**: `_interestRate` (taxa de juros em %)  
+  - `value` → valor do empréstimo  
+  - `createdAt` → data de criação  
+  - `installments` → lista de parcelas (instâncias de `Installment`)  
+
+- Regras:  
+  - O construtor deve receber o `value` e o número de parcelas.  
+  - Cada parcela deve ser criada como uma instância de `Installment`.  
+  - Deve haver um **getter e setter estáticos** para ler e modificar a taxa de juros.  
+
+4. Installment
+- Atributos:  
+  - `value` → valor da parcela  
+  - `number` → número da parcela  
+  - `status` → paga ou pendente  
+
+5. Account
+- Atributos:  
+  - **privado**: `_balance` (saldo da conta)  
+  - `deposits` → array com todos os depósitos  
+  - `loans` → array com todos os empréstimos  
+  - `transfers` → array com todas as transferências  
+  - `owner` → dono da conta (instância de `User`)  
+
+- Regras:  
+  - O saldo só pode ser alterado através de depósitos, transferências ou empréstimos.  
+  - Métodos obrigatórios:  
+    - `newDeposit(value)` → adiciona valor ao saldo e salva a instância de `Deposit`.  
+    - `newLoan(value, installments)` → adiciona valor ao saldo e salva a instância de `Loan`.  
+    - `newTransfer(toUser, value)` → cria uma instância de `Transfer`.  
+      - Se **recebida**, adiciona o valor ao saldo.  
+      - Se **enviada**, desconta o valor do saldo.  
+
+6. User
+- Atributos:  
+  - `fullName`  
+  - `email`  
+  - `account` (instância de `Account`)  
+
+7. App
+- Atributos:  
+  - **estático privado**: `_users` (lista de usuários cadastrados)  
+
+- Métodos estáticos:  
+  - `createUser(fullName, email)` → cria um novo usuário com conta, garantindo que o **email seja único**.  
+  - `findUserByEmail(email)` → retorna o usuário correspondente.  
+  - `deposit(email, value)` → realiza depósito na conta do usuário.  
+  - `transfer(fromEmail, toEmail, value)` → realiza transferência entre contas.  
+  - `loan(email, value, installments)` → realiza empréstimo.  
+  - `changeLoanInterest(newRate)` → altera a taxa de juros dos empréstimos.  
